@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mamamia — Trattoria Reimaginada</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Mamamia</a>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#home">Início</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-text reveal">
+          <h1>Mamamia — a tradição reimaginada</h1>
+          <p>Uma nova vida para clássicos italianos: massa artesanal, molhos lentos e um toque contemporâneo.</p>
+          <a class="btn" href="#contato">Reserve sua mesa</a>
+        </div>
+        <div class="hero-image reveal">
+          <img class="plate-img" src="images/hero.jpg" alt="Prato principal">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="container">
+        <h2 class="section-title reveal">Cardápio Mamamia</h2>
+        <p class="section-subtitle reveal">Clássicos italianos com toque contemporâneo.</p>
+        <div class="menu-grid">
+          <article class="card reveal">
+            <img class="card-img" src="images/salad.jpg" alt="Bruschetta al Pomodoro">
+            <h3>Bruschetta al Pomodoro</h3>
+            <p>Pão tostado, tomate do campo, manjericão e azeite extra-virgem.</p>
+            <span class="price">R$ 34,00</span>
+          </article>
+
+          <article class="card reveal">
+            <img class="card-img" src="images/risotto.jpg" alt="Risotto ai Funghi">
+            <h3>Risotto ai Funghi</h3>
+            <p>Arborio cremoso com funghi porcini, manteiga e parmesão ralado.</p>
+            <span class="price">R$ 52,00</span>
+          </article>
+
+          <article class="card reveal">
+            <img class="card-img" src="images/steak.jpg" alt="Bistecca alla Griglia">
+            <h3>Bistecca alla Griglia</h3>
+            <p>Corte nobre grelhado, ervas, azeite e batatas rústicas.</p>
+            <span class="price">R$ 79,00</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="sobre">
+      <div class="container about-inner">
+        <div class="about-text reveal">
+          <h2>Sobre a Trattoria</h2>
+          <p>A Trattoria Sapore traz receitas da nonna: massa feita na casa, molhos lentos e ingredientes importados quando necessário. Nosso foco é oferecer uma experiência acolhedora com pratos que lembram a Itália.</p>
+          <ul>
+            <li>Especialidade: massas artesanais</li>
+            <li>Seleção de vinhos italianos</li>
+            <li>Ambiente aconchegante e atendentes bilíngues</li>
+          </ul>
+        </div>
+        <div class="about-stats reveal">
+          <div class="stat">
+            <strong>15+</strong>
+            <span>Anos de tradição</span>
+          </div>
+          <div class="stat">
+            <strong>3</strong>
+            <span>Chefs italianos</span>
+          </div>
+          <div class="stat">
+            <strong>90%</strong>
+            <span>Avaliação média</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contato">
+      <div class="container">
+        <h2 class="section-title reveal">Faça sua reserva</h2>
+        <form class="reservation reveal" onsubmit="handleReserve(event)">
+          <div class="form-grid">
+            <input type="text" name="nome" placeholder="Seu nome" required>
+            <input type="tel" name="telefone" placeholder="Telefone" required>
+            <input type="date" name="data" required>
+            <input type="time" name="hora" required>
+          </div>
+          <div class="form-grid">
+            <input type="number" name="pessoas" min="1" max="20" placeholder="Número de pessoas" required>
+            <input type="email" name="email" placeholder="E-mail (opcional)">
+          </div>
+          <textarea name="mensagem" rows="3" placeholder="Observações (alergias, preferências)"></textarea>
+          <button class="btn" type="submit">Enviar reserva</button>
+          <p class="msg" id="msg"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Restaurante MamaMia — Centro, 123 — (11) 99999-9999</p>
+      <p>Feito com amor</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
